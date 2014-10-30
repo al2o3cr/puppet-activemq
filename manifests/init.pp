@@ -24,7 +24,7 @@ class activemq {
   }
 
   package { 'boxen/brews/activemq':
-    ensure => '5.8.0-boxen1',
+    ensure => '5.9.1-boxen1',
     notify => Service['dev.activemq'],
   }
 
