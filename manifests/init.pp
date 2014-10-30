@@ -10,10 +10,10 @@ class activemq {
     ensure => directory
   }
 
-  #file { "${boxen::config::homebrewdir}/etc/activmeq.xml":
-  #  ensure  => absent,
-  #  require => Package['boxen/brews/activemq']
-  #}
+  file { "${boxen::config::homebrewdir}/etc/activmeq.xml":
+    content => template('activemq/activemq.xml.erb'),
+    require => Package['boxen/brews/activemq']
+  }
 
   file { "${boxen::config::envdir}/activemq.sh":
     content => template('activemq/env.sh.erb'),

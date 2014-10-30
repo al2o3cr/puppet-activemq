@@ -18,6 +18,7 @@
     <array>
       <string><%= scope.lookupvar "activemq::config::executable" %></string>
       <string>console</string>
+      <string>xbean:<%= scope.lookupvar "boxen::config::homebrewdir" %>/etc/activemq.xml</string>
     </array>
 
     <key>RunAtLoad</key>
